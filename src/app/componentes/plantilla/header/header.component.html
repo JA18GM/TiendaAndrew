@@ -1,0 +1,27 @@
+
+<!-- 
+    <span style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"  >Tienda sobre articulos de Realidad Virtual</span>
+<div class="cart">
+    <img src="/assets/img/carrito.png" >
+   
+</div>
+-->
+
+<p-sidebar [(visible)]="sidebarVisible">
+    <h3>Carrito de compra</h3>
+    <!--div class="cart" (click)="openCartDialog()">
+      <img src="/assets/img/carrito.png">
+      <span>Mi carrito </span>
+    </div -->
+    
+
+  </p-sidebar>
+  
+  <div >
+  
+    <!--p-button class="mr-2" (click)="sidebarVisible = true" icon="pi-bars"></p-button-->
+    <p-button class="mr-2" (click)="openCartDialog()" icon="pi-bars">
+    </p-button>
+
+  </div>
+  

@@ -1,0 +1,111 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+
+html , body {
+    height:100%;
+    margin: 25px;
+}
+
+.header {
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 60px;
+    background-color: rgb(122, 161, 244);
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: -8px 9px 9px -3px rgba(72, 115, 246, 0.75);
+    -webkit-box-shadow: -8px 9px 9px -3px rgba(9, 239, 255, 0.75);
+    -moz-box-shadow: -8px 9px 9px -3px rgba(135, 161, 246, 0.75);
+}
+
+.footer{
+ 
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 40px;
+    background-color: rgb(111, 171, 255);
+    text-align:center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.content {
+    min-height: calc(100vh - 80px);
+    border: 1px solid rgb(255, 255, 255);
+    display: block;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+
+div.cart {
+    float: right;
+    margin-right: 5px;
+}
+
+.cart img {
+    height: 50px;
+    width: 50px;
+}
+
+.cart span {
+    font-size: 0.5rem;
+}
+
+.content {
+    display: block;
+    border: 1px solid;
+    min-height: calc(100vh - 80px);
+    margin-left: 10%;
+    text-align: center;
+    width: 80%;
+  
+    .producto {
+      display: inline-block;
+      margin-left: 5px;
+           width: 300px;
+      .imagen-card{
+        width: 90%;
+        height: 250px;
+        margin: 5px;
+    
+      }
+    } 
+  }
+
+.etiquetas {
+  align-self: flex-start;
+}
+
+
+/* Estilo para la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilo para las celdas de la tabla */
+.table th,
+.table td {
+  padding: 20px; /* Espacio interno de las celdas */
+  text-align: left; /* Alineación del texto */
+  border-bottom: 3px solid #ddd; /* Borde inferior de las filas */
+}
+
+/* Estilo para las celdas de la primera fila (encabezado) */
+.table th {
+  background-color: #f2f2f2; /* Color de fondo */
+  font-weight: bold; /* Estilo de texto en negrita */
+}
