@@ -1,37 +1,6 @@
-<!-- <p>Carrito de compras </p>
-<br />
-<div class="contenido">
-    <div class="item" *ngFor="let item of cart">
-        <span>Nombre:{{item.nombre | titlecase}}</span>
-        <span>Precio: {{item.precio | currency}}</span>
-        <span>Cantidad: {{item.cantidad}}</span>
-    </div>
-</div>
--->
 
 <!-- cart.component.html -->
-
-
-<!-- <div *ngIf="carrito.length > 0; else carritoVacio">
-    <div *ngFor="let producto of carrito" class="producto-item">
-      <div class="producto-imagen">
-        <img [src]="producto.imagen" alt="{{ producto.nombre }}">
-      </div>
-      <div class="producto-info">
-        <h4>{{ producto.nombre }}</h4>
-        <p>{{ producto.descripcion }}</p>
-        <p>Precio: ${{ producto.precio.toFixed(2) }}</p>
-        <p>Cantidad: {{ producto.cantidad }}</p>
-      </div>
-    </div>
-  </div>
-  <ng-template #carritoVacio>
-    <p>El carrito está vacío.</p>
-  </ng-template>
--->
-
-<!-- cart.component.html -->
-<div *ngIf="carrito.length > 0; else carritoVacio">
+<!--<div *ngIf="carrito.length > 0; else carritoVacio">
     <table class="table">
       <thead>
         <tr>
@@ -57,7 +26,6 @@
               <option value="rojo">Rojo</option>
               <option value="verde">Verde</option>
               <option value="azul">Azul</option>
-              <!-- Agregar más opciones de color según sea necesario -->
             </select>
           </td>
           <td>
@@ -65,7 +33,6 @@
               <option value="boton1">Botón 1</option>
               <option value="boton2">Botón 2</option>
               <option value="boton3">Botón 3</option>
-              <!-- Agregar más opciones de tipo de botón según sea necesario -->
             </select>
             
           </td>
@@ -84,3 +51,74 @@
   <ng-template #carritoVacio>
     <p>El carrito está vacío.</p>
   </ng-template>
+-->
+<div *ngIf="carrito.length > 0; else carritoVacio">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Imagen</th>
+        <th>Descripción</th>
+        <th>Precio Unitario</th>
+        <th>Cantidad</th>
+        <th>Color</th>
+        <th>Tipo</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of carrito">
+        <td><img [src]="producto.imagen" [alt]="producto.nombre" width="100" class="shadow-4" /></td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>${{ producto.precio.toFixed(2) }}</td>
+        <td>{{producto.cantidad}}</td>
+        <td >
+          <input type="color">
+          <!--
+          <select [(ngModel)]="producto.color">
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+          </select>
+        -->
+        </td>
+        <td>
+          <input type="text">
+          <!--
+            <select [(ngModel)]="producto.tipo">
+            <option value="boton1">Botón 1</option>
+            <option value="boton2">Botón 2</option>
+            <option value="boton3">Botón 3</option>
+          </select>-->
+        </td>
+        <td>${{ (producto.precio * producto.cantidad).toFixed(2) }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" class="text-end"><strong>IVA (16%):</strong></td>
+        <td>${{ calcularIVA().toFixed(2) }}</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="text-end"><strong>Total (sin IVA):</strong></td>
+        <td>${{ calcularTotal().toFixed(2) }}</td>
+      </tr>
+    </tfoot>
+    
+  </table>
+
+  <!-- Botón para dirigirse al componente PayPal -->
+<!-- En CarritoComponent.html u otro archivo de plantilla donde esté el botón 
+<button routerLink="/componentes/pago"
+  target="_blank" class="btn btn-primary" >PAGAR</button>-->
+  <div class="cart">
+    <button (click)="TotalPagar()" class="btn-pagar">PAGAR</button>
+  </div>
+  
+</div>
+
+<ng-template #carritoVacio>
+  <p>El carrito está vacío.</p>
+</ng-template>
+

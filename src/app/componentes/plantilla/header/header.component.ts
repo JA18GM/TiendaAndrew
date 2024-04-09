@@ -1,27 +1,12 @@
-
-//import { Component } from '@angular/core';
-
-//@Component({
-//  selector: 'app-header',
-//  templateUrl: './header.component.html',
-//  styleUrl: './header.component.scss'
-//})
-//export class HeaderComponent {
-//  sidebarVisible: boolean = false;
-//}
 import { Component, Output } from '@angular/core';
 import { DialogService } from 'primeng/dynamicdialog';
-//import { EventEmitter } from 'stream';
 import { EventEmitter } from '@angular/core';
 import { CartComponent } from '../../cart/cart.component';
-
-
-//import { CartComponent } from '../path-to-your-cart-component/cart.component'; // Asegúrate de proporcionar la ruta correcta
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'] // Corregido aquí
 })
 export class HeaderComponent {
 
@@ -43,4 +28,3 @@ export class HeaderComponent {
     });
   }
 }
-

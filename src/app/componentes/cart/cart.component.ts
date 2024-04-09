@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CartProducto } from '../../interface/cart-producto';
 import { CarritoService } from '../../carrito.service';
 import { Producto } from '../../interface/producto';
+import { DialogService } from 'primeng/dynamicdialog';
+import { Router } from '@angular/router';
+
+//import { PagoComponent } from '../../component/pago/pago.component';
 
 @Component({
   selector: 'app-cart',
@@ -10,18 +14,29 @@ import { Producto } from '../../interface/producto';
 })
 export class CartComponent implements OnInit {
   carrito!: Producto[];
+  totalDonation: number = 0;
+
+  iva: number = 0;
+
+calcularIVA(): number {
+  this.iva = this.calcularTotal() * 0.16; // Calcula el 16% del total
+  return this.iva;
+}
+
+TotalPagar(){
+  //sessionStorage.setItem("CarritoTotal")
+  localStorage.setItem("TotalCarrito",this.calcularTotal().toString())
+  this.openCheckout()
+}
+
+ calcularTotal(): number {
+  return this.carrito.reduce((acc, producto) => {
+    return acc + (producto.precio * producto.cantidad);
+  }, 0);
+}
 
 
 
-  calcularTotal(): number {
-    //let total=0
-
-    //return total;
-    return this.carrito.reduce(
-      (total, producto) => total + producto.precio * producto.cantidad,
-      0
-    );
-  }
 
   /*dd(producto: any) {
     console.log('producto agregado al carrito:', producto);
@@ -37,9 +52,22 @@ export class CartComponent implements OnInit {
 
   //constructor(private carritoService: CarritoService) {}
 
-  constructor(private carritoService: CarritoService) {}
-
+  constructor(private carritoService: CarritoService, private router: Router) {
+    this.carrito = [];
+  }
   ngOnInit(): void {
+    // Cargar el carrito desde el almacenamiento local al iniciar el componente
     this.carrito = JSON.parse(localStorage.getItem('cart') || '[]');
+    // Calcular el total del carrito
+    this.calcularTotal();
+    // Renderizar el botón de PayPal
+  }
+  goToClient(): void {
+    this.router.navigate(['client'])
+    //this.router.navigate(['/client']); // Navega a la ruta '/client' cuando se hace clic en el botón
+  }
+
+  openCheckout(): void {
+    window.open('/assets/client/checkout.html', '_blank'); // Abre checkout.html en una nueva pestaña del navegador
   }
 }

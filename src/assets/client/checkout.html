@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+</head>
+<body>
+    <div id="paypal-donate-button-container"></div>
+
+    <!-- Incluye el SDK de donaciones de PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AZibAJ68we6pl6bdHcpzJmLGQ_Tg9HXWaKisiISUFQeQ0AQq6PxP9OworYnEh8J7IxIabQkCfTCa83TN&currency=MXN"></script>
+    <!-- Aquí debes incluir el valor del total del carrito -->
+<script>
+  const totalCarrito = localStorage.getItem('TotalCarrito');
+</script>
+
+    <script>
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'pay'
+            },
+            createOrder:(data, actions)=> {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            //value: this.totalCarrito.toFixed(2), // Puedes ajustar el valor de la donación aquí
+                            value: totalCarrito,
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('¡Gracias por tu donación!');
+                });
+            },
+            onError: function(err) {
+                console.error('Error al procesar la donación:', err);
+            }
+        }).render('#paypal-donate-button-container');
+    </script>
+</body>
+</html>

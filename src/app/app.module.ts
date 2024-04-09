@@ -19,6 +19,8 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { DialogService } from 'primeng/dynamicdialog';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule
+import { NgxPayPalModule } from 'ngx-paypal';
+import { YourComponent } from './your/your.component';
 
 
 
@@ -28,6 +30,7 @@ import { FormsModule } from '@angular/forms'; // Importa FormsModule
     HeaderComponent,
     FooterComponent,
     CartComponent,
+    YourComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { FormsModule } from '@angular/forms'; // Importa FormsModule
     ProductosModule,
    SidebarModule,
    ButtonModule,
-   FormsModule
+   FormsModule,
+   NgxPayPalModule
    
    
 
