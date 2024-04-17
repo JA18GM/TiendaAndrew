@@ -11,5 +11,6 @@ colores: any;
     imagen: string;	
     cantidad: number;
     tipoBoton: string;
+    category?: string
 }
 

@@ -1,48 +1,5 @@
-
-    <!--  
-        
-        <p-card header=" {{producto?.nombre}}">
-    <ng-template pTemplate="header">
-        <img alt="Card" *ngIf="producto?.imagen" [src]="producto?.imagen" class="imagen-card" />
-    </ng-template>
--->
-
 <span>{{producto?.precio | currency}}</span>
 <ng-template pTemplate="footer">
     <p-button (click)="add()" label="Comprar" icon="pi pi-cart-plus"></p-button>
 </ng-template>
 
-
-
-
-    <!-- 
-        <p-tag class="etiquetas" icon="pi pi-info-circle" severity="info" value="">Dirección</p-tag>
-    <p>
-        {{producto?.direccion }}
-    </p>
-    <p></p>
-    <p-tag class="etiquetas" icon="pi pi-info-circle" severity="danger" value="">Teléfono</p-tag>
-    <p>{{producto?.telefono| uppercase}}</p>
-   
-    <span >{{producto?.precio | currency}}</span>
-    <ng-template pTemplate="footer">
-        <p-button (Click)="add()" label="Agendar"  icon="pi pi-cart-plus"></p-button>
-    </ng-template>
--->
-<!--</p-card>-->
-
-<!--
-    <p-card header=" {{producto?.nombre}}">
-    <ng-template pTemplate="header">
-        <img alt="Card" *ngIf="producto?.imagen" [src]="producto?.imagen" class="imagen-card" />
-    </ng-template>
-    <p-tag class="etiquetas" icon="pi pi-info-circle" severity="info" value="">Dirección</p-tag>
-    {{producto?.direccion }}
-    <p></p>
-    Hola mundo, el universo es algo triste
-
-    <ng-template pTemplate="footer">
-        <p-button (Click)="add()" label="Agregar"  icon="pi pi-cart-plus"></p-button>
-    </ng-template>
-  </p-card>
--->

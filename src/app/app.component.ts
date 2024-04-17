@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
-import { BlobOptions } from 'buffer';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'agsc-store';
-  showCart: boolean=false
+  title = 'JAGM-store';
+  showCart: boolean = false;
+  usuarioAutenticado: boolean = false; // Asegúrate de definir esta propiedad
 
-  toogleCart(){
-    this.showCart= !this.showCart
+  constructor() {
+    // Aquí podrías colocar la lógica para verificar si el usuario está autenticado
+    // Por ahora, lo estableceré en true para simular que el usuario está autenticado
+    this.usuarioAutenticado = true;
+  }
+
+  toogleCart() {
+    this.showCart = !this.showCart;
   }
 }

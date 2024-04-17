@@ -1,7 +1,67 @@
 {
-    "productos": [
-      {"id":"1", "nombre":"Botones", "descripcion":"Tipos de botones que se pueden implementar dentro de la aplicacion", "precio":400,"color":"negro","tipo":"1", "imagen":"https://static.vecteezy.com/system/resources/previews/002/038/714/large_2x/flat-web-button-design-elements-simple-design-of-ui-web-buttons-vector.jpg"},
-      {"id":"2", "nombre":"Plano", "descripcion":"Estos aportan a la imagen la posibilidad de agregar imagenes, videos, etc", "precio":350,"color":"negro","tipo":"1", "imagen":"https://tse3.mm.bing.net/th?id=OIP.v4cLJE8KaTOEiGotLbMIbAHaHa&pid=Api&P=0&h=220"} ,
-      {"id":"3", "nombre":"Modelo", "descripcion":"Estos modelos pueden ayudar a agregar una mejor experiencia visual al usuario ", "precio":800,"color":"negro","tipo":"1", "imagen":"https://1.bp.blogspot.com/-Igu7d0npJ1w/WVPhad5sXjI/AAAAAAAACps/kaSSOAo7bwEkfkY2OrItobkhoRQrALBGwCLcBGAs/s1600/pitufo_Daniel-Abecasis05.png"}
-    ]
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Botones",
+      "descripcion": "Tipos de botones que se pueden implementar dentro de la aplicacion",
+      "precio": 400,
+      "color": "negro",
+      "tipo": "1",
+      "imagen": "https://static.vecteezy.com/system/resources/previews/002/038/714/large_2x/flat-web-button-design-elements-simple-design-of-ui-web-buttons-vector.jpg"
+    },
+    {
+      "id": "2",
+      "nombre": "Plano",
+      "descripcion": "Estos aportan a la imagen la posibilidad de agregar imagenes, videos, etc",
+      "precio": 350,
+      "color": "negro",
+      "tipo": "1",
+      "imagen": "https://tse3.mm.bing.net/th?id=OIP.v4cLJE8KaTOEiGotLbMIbAHaHa&pid=Api&P=0&h=220"
+    },
+    {
+      "id": "3",
+      "nombre": "Modelo",
+      "descripcion": "Estos modelos pueden ayudar a agregar una mejor experiencia visual al usuario ",
+      "precio": 800,
+      "color": "negro",
+      "tipo": "1",
+      "imagen": "https://1.bp.blogspot.com/-Igu7d0npJ1w/WVPhad5sXjI/AAAAAAAACps/kaSSOAo7bwEkfkY2OrItobkhoRQrALBGwCLcBGAs/s1600/pitufo_Daniel-Abecasis05.png"
+    },
+    {
+      "id": "4b78",
+      "nombre": "nada",
+      "descripcion": "nada",
+      "precio": "100",
+      "color": "azul",
+      "tipo": "pollo",
+      "imagen": "https://tse3.mm.bing.net/th?id=OIP.GEoZQKRQ8wM8n2jiNNxTjwHaEN&pid=Api&P=0&h=220"
+    },
+    {
+      "id": "6298",
+      "nombre": "nada",
+      "descripcion": "nada",
+      "precio": "100",
+      "color": "azul",
+      "tipo": "pollo",
+      "imagen": "https://tse3.mm.bing.net/th?id=OIP.GEoZQKRQ8wM8n2jiNNxTjwHaEN&pid=Api&P=0&h=220"
+    },
+    {
+      "id": "39b8",
+      "nombre": "nada",
+      "descripcion": "nada",
+      "precio": "100",
+      "color": "azul",
+      "tipo": "pollo",
+      "imagen": "https://tse3.mm.bing.net/th?id=OIP.GEoZQKRQ8wM8n2jiNNxTjwHaEN&pid=Api&P=0&h=220"
+    },
+    {
+      "id": "88db",
+      "nombre": "nada",
+      "descripcion": "nada",
+      "precio": "100",
+      "color": "azul",
+      "tipo": "pollo",
+      "imagen": "https://tse3.mm.bing.net/th?id=OIP.GEoZQKRQ8wM8n2jiNNxTjwHaEN&pid=Api&P=0&h=220"
+    }
+  ]
 }

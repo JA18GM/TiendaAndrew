@@ -11,7 +11,7 @@ import { CarritoService } from '../../carrito.service';
   styleUrl: './productos-lista.component.scss',
 })
 export class ProductosListaComponent {
-  productos!: Producto[];
+  productos: Producto[] = []; // Inicializando productos como un array vacío
   //productoService: any;
 
   //constructor(private productoService: ProductoService){}

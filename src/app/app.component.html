@@ -2,12 +2,17 @@
 
   <div class="header">
     <app-header></app-header>
-    <app-cart *ngIf="showCart"></app-cart>
+    <!--<app-cart *ngIf="showCart"></app-cart>-->
   </div>
-
+<!--
   <div class="content">
     <app-productos-lista></app-productos-lista>
   </div>
+-->
+<div class="flex align-items-center justify-content-center h-full">
+  <router-outlet></router-outlet>
+  <p-toast></p-toast>
+</div>
 
   <div class="footer">
     <app-footer></app-footer>
